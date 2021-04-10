@@ -11,11 +11,17 @@
       <td>{{task.id}}</td>
       <td>{{task.title}}</td>
       <td>
-        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#taskDetail" (click)="onSelect(task)">
-          <fa-icon [icon]="faInfo"></fa-icon>
-          Info
-        </button>
-        <button type="button" class="btn btn-danger">Danger</button>
+        <div class="btn-group" role="group" aria-label="Actions">
+          <button type="button" class="btn btn-info" data-toggle="modal" data-target="#taskDetail" (click)="onSelect(task)">
+            <fa-icon [icon]="faInfo"></fa-icon>
+            Info
+          </button>
+          <button type="button" class="btn btn-danger">
+            <fa-icon [icon]="faAngry"></fa-icon>
+            Remover
+          </button>
+        </div>
+
       </td>
     </tr>
   </tbody>
